@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    transition: background-color 0.3s;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #999;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.theme-toggle:hover {
+    background-color: #666;
+    transform: scale(1.1);
+}
+
+body.dark-mode {
+    background-color: #121212;
+}
+
+.calculator {
+    width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+}
+
+.display {
+    font-size: 2.2em;
+    text-align: right;
+    padding: 20px;
+    background-color: #f2f2f2;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .calculator {
+    background-color: #333;
+}
+
+body.dark-mode .display {
+    background-color: #121212;
+    color: #fff;
+}
+
+.buttons {
+    display: grid;
+    gap: 5px;
+    padding: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.btn {
+    font-size: 1.4em;
+    padding: 20px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    outline: none;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+body.light-mode .btn {
+    background-color: #eeeeee;
+    color: #333;
+}
+
+body.dark-mode .btn {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+body.light-mode .operator {
+    background-color: #4db6e5; /* Azul Claro */
+    color: #ffffff;
+}
+
+body.dark-mode .operator {
+    background-color: #ff9800; /* Laranja para modo escuro */
+}
+
+body.light-mode .function {
+    background-color: #7ad5ff; /* Azul claro */
+    color: #333;
+}
+
+body.dark-mode .function {
+    background-color: #424242; /* Cinza escuro */
+    color: #fff;
+}
+
+body.light-mode .equals {
+    background-color: #4db6e5; /* Azul Claro */
+    color: #ffffff;
+}
+
+body.dark-mode .equals {
+    background-color: #ff9800;
+    color: #ffffff;
+}
+
+.zero {
+    grid-column: span 2;
+}
